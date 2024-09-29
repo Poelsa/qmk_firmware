@@ -16,6 +16,26 @@
 
 #pragma once
 
+/*
+ * Tap options
+ */
+#undef DEBOUNCE
+#define DEBOUNCE 10
+
+/*
+ * Tap-Hold options
+ */
+#define TAPPING_TERM 130
+#define PERMISSIVE_HOLD
+
+/*
+ * Layer options
+ */
+#define TAPPING_TOGGLE 2
+
+/*
+ * Audio options
+ */
 #ifdef AUDIO_ENABLE
 #    define STARTUP_SONG SONG(PREONIC_SOUND)
 // #define STARTUP_SONG SONG(NO_SOUND)
@@ -27,14 +47,18 @@
 #define MUSIC_MASK (keycode != KC_NO)
 
 /*
+ * RGB options
+ */
+#undef RGBLIGHT_ANIMATIONS
+
+/*
  * MIDI options
  */
-
 /* enable basic MIDI features:
    - MIDI notes can be sent when in Music mode is on
 */
 
-#define MIDI_BASIC
+//#define MIDI_BASIC
 
 /* enable advanced MIDI features:
    - MIDI notes can be added to the keymap
